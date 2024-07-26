@@ -602,6 +602,31 @@
 										background-color: #c07a3d;
 									}
 								</style>
+								<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+								<script>
+									document.addEventListener('DOMContentLoaded', function() {
+										const form = document.querySelector('form');
+										const submitButton = form.querySelector('input[type="submit"]');
+
+										form.addEventListener('submit', function(e) {
+											e.preventDefault();
+											
+											const formData = new FormData(form);
+											submitButton.value = 'Sending...';
+											submitButton.disabled = true;
+
+											axios.post('https://formspree.io/f/xrbzpgyr', formData)
+												.then(function(response) {
+													form.innerHTML = '<p>Thank you for your message. I\'ll get back to you soon!</p>';
+												})
+												.catch(function(error) {
+													alert('Oops! There was an error. Please try again later.');
+													submitButton.value = 'Send Message';
+													submitButton.disabled = false;
+												});
+										});
+									});
+								</script>
 								<form action="https://formspree.io/f/xrbzpgyr" method="POST">
 									<div class="row">
 										<div class="col-6 col-12-medium">
