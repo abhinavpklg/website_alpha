@@ -1,0 +1,531 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Abhinav Pandey</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#education" class="icon solid fa-graduation-cap"><span>Education</span></a>
+						<a href="#work" class="icon solid fa-briefcase"><span>Experience</span></a>
+						<a href="#technology" class="icon solid fa-cogs"><span>Technology</span></a>
+						<a href="#projects" class="icon solid fa-tasks"><span>Projects</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>Abhinav Pandey</h1>
+									
+									<p id="animated-text"></p>
+									<style>
+										#animated-text {
+											display: inline;
+											border-right: 2px solid;
+											white-space: nowrap;
+											overflow: hidden;
+											animation: blink-caret 0.75s step-end infinite;
+										}
+
+										@keyframes blink-caret {
+											from, to { border-color: transparent; }
+											50% { border-color: rgb(0, 0, 0); }
+										}
+									</style>
+									<script>
+										const phrases = [
+											"Software Engineer",
+											"Full Stack Developer",
+											"Frontend . Backend . Cloud Infra . DevOps",
+											"Tech Enthusiast",
+											"AI First Engineer"
+										];
+										let currentPhraseIndex = 0;
+										let currentLetterIndex = 0;
+										const animatedTextElement = document.getElementById("animated-text");
+
+										function typePhrase() {
+											if (currentLetterIndex < phrases[currentPhraseIndex].length) {
+												animatedTextElement.textContent += phrases[currentPhraseIndex].charAt(currentLetterIndex);
+												currentLetterIndex++;
+												setTimeout(typePhrase, 100);
+											} else {
+												setTimeout(erasePhrase, 2000);
+											}
+										}
+
+										function erasePhrase() {
+											if (currentLetterIndex > 0) {
+												animatedTextElement.textContent = phrases[currentPhraseIndex].substring(0, currentLetterIndex - 1);
+												currentLetterIndex--;
+												setTimeout(erasePhrase, 50);
+											} else {
+												currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+												setTimeout(typePhrase, 500);
+											}
+										}
+
+										typePhrase();
+									</script>
+									<br></br>
+									<style>
+										.social-links {
+											display: flex;
+											justify-content: center;
+											gap: 50px;
+											margin-top: 20px;
+										}
+										.social-links a {
+											text-decoration: none;
+											color: inherit;
+											font-size: 1.5em;
+											transition: color 0.3s ease;
+											margin: 10px;
+										}
+										.social-links a:hover {
+											color: #e09a5d;
+										}
+									</style>
+									<div class="social-links">
+										<a href="https://www.linkedin.com/in/abhinavpandey-" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+										<a href="https://github.com/abhinavpklg" class="icon brands fa-github"><span class="label">GitHub</span></a>
+										<a href="mailto:abhinavp.us@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
+									</div>
+									<style>
+										.social-links {
+											display: flex;
+											justify-content: center;
+											gap: 10px;
+											margin-top: 10px;
+										}
+										.social-links a {
+											text-decoration: none;
+											color: inherit;
+										}
+									</style>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+								</a>
+							</article>
+						<!--Education-->
+						<article id="education" class="panel">
+							
+						</article>
+
+
+
+						<!-- Work -->
+
+							<article id="work" class="panel">
+								<style>
+									.timeline {
+										position: relative;
+										max-width: 1200px;
+										margin: 0 auto;
+										padding: 20px 0;
+									}
+									.timeline::after {
+										content: '';
+										position: absolute;
+										width: 6px;
+										background-color: #e09a5d;
+										top: 0;
+										bottom: 0;
+										left: 50%;
+										margin-left: -3px;
+									}
+									.container {
+										padding: 10px 40px;
+										position: relative;
+										background-color: inherit;
+										width: 50%;
+									}
+									.container::after {
+										content: '';
+										position: absolute;
+										width: 25px;
+										height: 25px;
+										right: -17px;
+										background-color: white;
+										border: 4px solid #e09a5d;
+										top: 15px;
+										border-radius: 50%;
+										z-index: 1;
+									}
+									.left {
+										left: 0;
+									}
+									.right {
+										left: 50%;
+									}
+									.left::before {
+										content: " ";
+										height: 0;
+										position: absolute;
+										top: 22px;
+										width: 0;
+										z-index: 1;
+										right: 30px;
+										border: medium solid #e09a5d;
+										border-width: 10px 0 10px 10px;
+										border-color: transparent transparent transparent #e09a5d;
+									}
+									.right::before {
+										content: " ";
+										height: 0;
+										position: absolute;
+										top: 22px;
+										width: 0;
+										z-index: 1;
+										left: 30px;
+										border: medium solid #e09a5d;
+										border-width: 10px 10px 10px 0;
+										border-color: transparent #e09a5d transparent transparent;
+									}
+									.right::after {
+										left: -16px;
+									}
+									.content {
+										padding: 20px 30px;
+										background-color: white;
+										position: relative;
+										border-radius: 6px;
+									}
+									.company-logo {
+										width: 160px;
+										height: auto;
+										margin-bottom: 5px;
+									}
+									.position {
+										margin-bottom: 10px;
+									}
+								</style>
+								
+								<div class="timeline">
+									<div class="container right">
+										<div class="content">
+											<a href="https://www.dekco.ai" target="_blank">
+												<img src="images/decko.png" alt="Dekco.ai" class="company-logo">
+											</a>
+											<div class="position">
+												<p><strong>Lead Software Engineer</strong></p>
+												<p>Apr 2021 - Aug 2023</p>
+											</div>
+										</div>
+									</div>
+									<div class="container left">
+										<div class="content">
+											<a href="https://www.snaptrude.com/" target="_blank">
+												<img src="images/snaptrude.jpg" alt="Snaptrude" class="company-logo">
+											</a>
+											<div class="position">
+												<p><strong>Software Engineer</strong></p>
+												<p>Dec 2018 - Mar 2021</p>
+											</div>
+										</div>
+									</div>
+									<div class="container right">
+										<div class="content">
+											<a href="https://www.companya.com" target="_blank">
+												<img src="images/inszoom.png" alt="inszoom" class="company-logo">
+											</a>
+											<div class="position">
+												<p><strong>Product Engineer</strong></p>
+												<p>Jun 2018 - Nov 2018</p>
+											</div>
+											<div class="position">
+												<p><strong>Product Engineer Intern</strong></p>
+												<p>Feb 2018 - May 2018</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								</section>
+							</article>
+						<!--Technology-->
+						<article id="technology" class="panel">
+							
+							<style>
+								.skills-container {
+									display: flex;
+									flex-wrap: wrap;
+									justify-content: center;
+									gap: 20px;
+								}
+								.skill-category {
+									width: 100%;
+									margin-bottom: 30px;
+								}
+								.skill-category h3 {
+									text-align: center;
+									margin-bottom: 15px;
+								}
+								.skill-item {
+									display: flex;
+									flex-direction: column;
+									align-items: center;
+									width: 100px;
+								}
+								.skill-item img {
+									width: 50px;
+									height: 50px;
+									object-fit: contain;
+									margin-bottom: 10px;
+								}
+								.skill-item .skill-name {
+									text-align: center;
+									font-size: 0.8em;
+								}
+								.skill-item .proficiency {
+									width: 100%;
+									height: 5px;
+									background-color: #ddd;
+									border-radius: 5px;
+									overflow: hidden;
+								}
+								.skill-item .proficiency-level {
+									height: 100%;
+									background-color: #e09a5d;
+								}
+							</style>
+							<div class="skills-container">
+								<div class="skill-category">
+									<h3>Languages</h3>
+									<div class="skills-container">
+										<div class="skill-item">
+											<img src="images/skills/js.png" alt="JavaScript">
+											<span class="skill-name">JavaScript</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/python.png" alt="Python">
+											<span class="skill-name">Python</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/javaj.png" alt="Java">
+											<span class="skill-name">Java</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/C_sharp.png" alt="C#">
+											<span class="skill-name">C#</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/HTML.png" alt="HTML">
+											<span class="skill-name">HTML</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 95%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/css.png" alt="CSS">
+											<span class="skill-name">CSS</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/ts.png" alt="TypeScript">
+											<span class="skill-name">TypeScript</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/sql.png" alt="SQL">
+											<span class="skill-name">SQL</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="skill-category">
+									<h3>Frontend</h3>
+									<div class="skills-container">
+										<div class="skill-item">
+											<img src="images/skills/react.png" alt="ReactJS">
+											<span class="skill-name">ReactJS</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/angular.png" alt="Angular">
+											<span class="skill-name">Angular</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/vue.png" alt="Vue.js">
+											<span class="skill-name">Vue.js</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/bootstrap.png" alt="Bootstrap">
+											<span class="skill-name">Bootstrap</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/jquery.png" alt="jQuery">
+											<span class="skill-name">jQuery</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/babylon.png" alt="Babylon.js">
+											<span class="skill-name">Babylon.js</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="skill-category">
+									<h3>Backend</h3>
+									<div class="skills-container">
+										<div class="skill-item">
+											<img src="images/skills/node.png" alt="Node.js">
+											<span class="skill-name">Node.js</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/express.png" alt="Express.js">
+											<span class="skill-name">Express.js</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/net.png" alt="ASP.NET">
+											<span class="skill-name">ASP.NET</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/django.png" alt="Django">
+											<span class="skill-name">Django</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="skill-category">
+									<h3>Databases</h3>
+									<div class="skills-container">
+										<div class="skill-item">
+											<img src="images/skills/mssql.png" alt="MS SQL">
+											<span class="skill-name">MS SQL</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/mysql.png" alt="MySQL">
+											<span class="skill-name">MySQL</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/postgre.png" alt="PostgreSQL">
+											<span class="skill-name">PostgreSQL</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/mongo.png" alt="MongoDB">
+											<span class="skill-name">MongoDB</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="skill-category">
+									<h3>Cloud</h3>
+									<div class="skills-container">
+										<div class="skill-item">
+											<img src="images/skills/docker.png" alt="Docker">
+											<span class="skill-name">Docker</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/jenkins.png" alt="Jenkins">
+											<span class="skill-name">Jenkins</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/gcp.png" alt="GCP">
+											<span class="skill-name">GCP</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/terraform.png" alt="Terraform">
+											<span class="skill-name">Terraform</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 65%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/packer.png" alt="Packer">
+											<span class="skill-name">Packer</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 65%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/aws.webp" alt="AWS">
+											<span class="skill-name">AWS</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+										</div>
+									</div>
+								</div>
+								<div class="skill-category">
+									<h3>Others</h3>
+									<div class="skills-container">
+										<div class="skill-item">
+											<img src="images/skills/git.png" alt="Git">
+											<span class="skill-name">Git</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 95%;"></div></div>
+										</div>
+										<div class="skill-item">
+											<img src="images/skills/jest.png" alt="Jest">
+											<span class="skill-name">Jest</span>
+											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message" rows="6"></textarea>
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</article>
+
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
