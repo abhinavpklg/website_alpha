@@ -1,656 +1,683 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en" class="no-js">
 	<head>
 		<title>Abhinav Pandey</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo4.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
-	<body class="is-preload">
+	
+	<body class="demo-4">
+		<main>
+			
+			<div class="content content--canvas">
+				<style>
+					#wrapper {
+						position: absolute;
+						z-index: 1;
+					}
+				</style>
+				<div id="wrapper">
 
-		<!-- Wrapper-->
-			<div id="wrapper">
+					<!-- Nav -->
+						<nav id="nav">
+							<a href="#" class="icon solid fa-home"><span>Home</span></a>
+							<a href="#journey" class="icon solid fa-road"><span>Journey</span></a>
+							<a href="#technology" class="icon solid fa-cogs"><span>Technology</span></a>
+							<a href="#project" class="icon solid fa-tasks"><span>Projects</span></a>
+							<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+						</nav>
+	
+					<!-- Main -->
+						<style>
+							#main {
+								opacity: 0.85;
+								transition: opacity 0.3s ease;
+							}
+							#main:hover {
+								opacity: 1;
+							}
+						</style>
+						<div id="main">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#journey" class="icon solid fa-road"><span>Journey</span></a>
-						<a href="#technology" class="icon solid fa-cogs"><span>Technology</span></a>
-						<a href="#project" class="icon solid fa-tasks"><span>Projects</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>Abhinav Pandey</h1>
-									
-									<p id="animated-text"></p>
-									<style>
-										#animated-text {
-											display: inline;
-											border-right: 2px solid;
-											white-space: nowrap;
-											overflow: hidden;
-											animation: blink-caret 0.75s step-end infinite;
-										}
-
-										@keyframes blink-caret {
-											from, to { border-color: transparent; }
-											50% { border-color: rgb(0, 0, 0); }
-										}
-									</style>
-									<script>
-										const phrases = [
-											"Software Engineer",
-											"Full Stack Developer",
-											"Frontend . Backend . Cloud Infra . DevOps",
-											"Tech Enthusiast",
-											"AI First Engineer"
-										];
-										let currentPhraseIndex = 0;
-										let currentLetterIndex = 0;
-										const animatedTextElement = document.getElementById("animated-text");
-
-										function typePhrase() {
-											if (currentLetterIndex < phrases[currentPhraseIndex].length) {
-												animatedTextElement.textContent += phrases[currentPhraseIndex].charAt(currentLetterIndex);
-												currentLetterIndex++;
-												setTimeout(typePhrase, 100);
-											} else {
-												setTimeout(erasePhrase, 2000);
-											}
-										}
-
-										function erasePhrase() {
-											if (currentLetterIndex > 0) {
-												animatedTextElement.textContent = phrases[currentPhraseIndex].substring(0, currentLetterIndex - 1);
-												currentLetterIndex--;
-												setTimeout(erasePhrase, 50);
-											} else {
-												currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
-												setTimeout(typePhrase, 500);
-											}
-										}
-
-										typePhrase();
-									</script>
-									<br></br>
-									<style>
-										.social-links {
-											display: flex;
-											justify-content: center;
-											gap: 50px;
-											margin-top: 20px;
-										}
-										.social-links a {
-											text-decoration: none;
-											color: inherit;
-											font-size: 1.5em;
-											transition: color 0.3s ease;
-											margin: 10px;
-										}
-										.social-links a:hover {
-											color: #e09a5d;
-										}
-									</style>
-									<div class="social-links">
-										<a href="https://www.linkedin.com/in/abhinavpandey-" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
-										<a href="https://github.com/abhinavpklg" class="icon brands fa-github"><span class="label">GitHub</span></a>
-										<a href="mailto:abhinavp.us@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
-									</div>
-									<style>
-										.social-links {
-											display: flex;
-											justify-content: center;
-											gap: 10px;
-											margin-top: 10px;
-										}
-										.social-links a {
-											text-decoration: none;
-											color: inherit;
-										}
-									</style>
-								</header>
-								<a href="#journey" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
-									<img src="images/me.jpg" alt="" />
-								</a>
-							</article>
-						<!-- Journey -->
-						<article id="journey" class="panel">
-							<header>
-								<h2>My Journey</h2>
-							</header>
-							<div class="timeline">
-								<div class="timeline-item">
-									<div class="timeline-content">
-										<h3>Master of Science, Software Engineering Systems</h3>
-										<p><a href="https://graduate.northeastern.edu/program/master-of-science-in-software-engineering-systems-18774/" target="_blank"><img src="images/neu.jpg" alt="Northeastern University Logo" class="logo"></a></p>
-										<p>Northeastern University (Sept 2023 - May 2025)</p>
-										<p>• Software Engineering Fellow, <a href="https://headstarter.co/" target="_blank">Headstarter AI</a> (July-Sept 2024)</p>
-									</div>
-								</div>
-								<div class="timeline-item">
-									<div class="timeline-content">
-										<h3>Lead Software Engineer (Full Stack)</h3>
-										<p><a href="https://dekco.ai/" target="_blank"><img src="images/decko.png" alt="Dekco.ai Logo" class="logo"></a></p>
-										<p>Dekco.ai (Apr 2021 - Aug 2023)</p>
-									</div>
-								</div>
-								<div class="timeline-item">
-									<div class="timeline-content">
-										<h3>Software Engineer (Graphics, Full Stack)</h3>
-										<p><a href="https://www.snaptrude.com/" target="_blank"><img src="images/snaptrude.jpg" alt="Snaptrude Logo" class="logo"></a></p>
-										<p>Snaptrude (Dec 2018 - March 2021)</p>
-									</div>
-								</div>
-								<div class="timeline-item">
-									<div class="timeline-content">
-										<h3>Product Engineer (Full Stack)</h3>
-										<p><a href="https://mitratech.com/products/inszoom/" target="_blank"><img src="images/inszoom.png" alt="INSZoom" class="logo"></a></p>
-										<p>INSZoom (July 2018 - Nov 2018)</p>
-									</div>
-								</div>
-								<div class="timeline-item">
-									<div class="timeline-content">
-										<h3>Bachelor of Engineering, Computer Science</h3>
-										<p><a href="https://www.kletech.ac.in/" target="_blank"><img src="images/kle.png" alt="BVB College Logo" class="logo"></a></p>
-										<p>KLE Technological University (Sept 2014 - June 2018)</p>
-										<p>• Product Engineer Intern, <a href="https://mitratech.com/products/inszoom/" target="_blank">INSZoom</a> (Feb-May 2018)</p>
-										<p>• Publication: <a href="https://journaleet.in/articles/transition-from-conventional-to-agile-process-model-an-experience-report" target="_blank">"Transition from Conventional to Agile Process Model"</a> (Jan 2018)</p>
-										<p>• <a href="https://www.uml.edu/msb/global-entrepreneurship/" target="_blank">Global Entrepreneurship Exchange</a>, UMass Lowell (Dec 2017 - Jan 2018)</p>
-										<p>• Student Developer, <a href="https://www.gdv.com.au/" target="_blank">Global Digital Vision</a> (Jan-June 2017)</p>
-										<p>• Freelance Developer (June-Sept 2016)</p>
-									</div>
-								</div>
-							</div>
-							<style>
-								.timeline {
-									position: relative;
-									max-width: 1200px;
-									margin: 0 auto;
-								}
-								.timeline::after {
-									content: '';
-									position: absolute;
-									width: 6px;
-									background-color: #e09a5d;
-									top: 0;
-									bottom: 0;
-									left: 50%;
-									margin-left: -3px;
-								}
-								.timeline-item {
-									padding: 5px 5px;
-									position: relative;
-									background-color: inherit;
-									width: 50%;
-								}
-								
-								.timeline-item::after {
-									content: '';
-									position: absolute;
-									width: 25px;
-									height: 25px;
-									right: -13px;
-									background-color: white;
-									border: 4px solid #e09a5d;
-									top: 15px;
-									border-radius: 50%;
-									z-index: 1;
-								}
-								.timeline-item:nth-child(odd) {
-									left: 0;
-								}
-								.timeline-item:nth-child(even) {
-									left: 50%;
-								}
-								.timeline-item:nth-child(even)::after {
-									left: -13px;
-								}
-								.timeline-content {
-									padding: 20px 30px;
-									background-color: white;
-									position: relative;
-									border-radius: 6px;
-								}
-								.logo {
-									max-width: 150px;
-									max-height: 75px;
-									display: block;
-									margin: 20px auto 10px;
-									float: none;
-								}
-							</style>
-						</article>
-						<!--Technology-->
-						<article id="technology" class="panel">
+	
+							<!-- Me -->
 							
-							<style>
-								.skills-container {
-									display: flex;
-									flex-wrap: wrap;
-									justify-content: center;
-									gap: 20px;
-								}
-								.skill-category {
-									width: 100%;
-									margin-bottom: 30px;
-								}
-								.skill-category h3 {
-									text-align: center;
-									margin-bottom: 15px;
-								}
-								.skill-item {
-									display: flex;
-									flex-direction: column;
-									align-items: center;
-									width: 100px;
-								}
-								.skill-item img {
-									width: 50px;
-									height: 50px;
-									object-fit: contain;
-									margin-bottom: 10px;
-								}
-								.skill-item .skill-name {
-									text-align: center;
-									font-size: 0.8em;
-								}
-								.skill-item .proficiency {
-									width: 100%;
-									height: 5px;
-									background-color: #ddd;
-									border-radius: 5px;
-									overflow: hidden;
-								}
-								.skill-item .proficiency-level {
-									height: 100%;
-									background-color: #e09a5d;
-								}
-							</style>
-							<div class="skills-container">
-								<div class="skill-category">
-									<h3>Languages</h3>
-									<div class="skills-container">
-										<div class="skill-item">
-											<img src="images/skills/js.png" alt="JavaScript">
-											<span class="skill-name">JavaScript</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+								<article id="home" class="panel intro">
+									<header>
+										<h1>Abhinav Pandey</h1>
+										
+										<p id="animated-text"></p>
+										<style>
+											#animated-text {
+												display: inline;
+												border-right: 2px solid;
+												white-space: nowrap;
+												overflow: hidden;
+												animation: blink-caret 0.75s step-end infinite;
+											}
+	
+											@keyframes blink-caret {
+												from, to { border-color: transparent; }
+												50% { border-color: rgb(0, 0, 0); }
+											}
+										</style>
+										<script>
+											const phrases = [
+												"Software Engineer",
+												"Full Stack Developer",
+												"Frontend . Backend . Cloud Infra . DevOps",
+												"Tech Enthusiast",
+												"AI First Engineer"
+											];
+											let currentPhraseIndex = 0;
+											let currentLetterIndex = 0;
+											const animatedTextElement = document.getElementById("animated-text");
+	
+											function typePhrase() {
+												if (currentLetterIndex < phrases[currentPhraseIndex].length) {
+													animatedTextElement.textContent += phrases[currentPhraseIndex].charAt(currentLetterIndex);
+													currentLetterIndex++;
+													setTimeout(typePhrase, 100);
+												} else {
+													setTimeout(erasePhrase, 2000);
+												}
+											}
+	
+											function erasePhrase() {
+												if (currentLetterIndex > 0) {
+													animatedTextElement.textContent = phrases[currentPhraseIndex].substring(0, currentLetterIndex - 1);
+													currentLetterIndex--;
+													setTimeout(erasePhrase, 50);
+												} else {
+													currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+													setTimeout(typePhrase, 500);
+												}
+											}
+	
+											typePhrase();
+										</script>
+										<br></br>
+										<style>
+											.social-links {
+												display: flex;
+												justify-content: center;
+												gap: 50px;
+												margin-top: 20px;
+											}
+											.social-links a {
+												text-decoration: none;
+												color: inherit;
+												font-size: 1.5em;
+												transition: color 0.3s ease;
+												margin: 10px;
+											}
+											.social-links a:hover {
+												color: #e09a5d;
+											}
+										</style>
+										<div class="social-links">
+											<a href="https://www.linkedin.com/in/abhinavpandey-" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+											<a href="https://github.com/abhinavpklg" class="icon brands fa-github"><span class="label">GitHub</span></a>
+											<a href="mailto:abhinavp.us@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
 										</div>
-										<div class="skill-item">
-											<img src="images/skills/python.png" alt="Python">
-											<span class="skill-name">Python</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/javaj.png" alt="Java">
-											<span class="skill-name">Java</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/C_sharp.png" alt="C#">
-											<span class="skill-name">C#</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/HTML.png" alt="HTML">
-											<span class="skill-name">HTML</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 95%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/css.png" alt="CSS">
-											<span class="skill-name">CSS</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/ts.png" alt="TypeScript">
-											<span class="skill-name">TypeScript</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/sql.png" alt="SQL">
-											<span class="skill-name">SQL</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill-category">
-									<h3>Frontend</h3>
-									<div class="skills-container">
-										<div class="skill-item">
-											<img src="images/skills/react.png" alt="ReactJS">
-											<span class="skill-name">ReactJS</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/angular.png" alt="Angular">
-											<span class="skill-name">Angular</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/vue.png" alt="Vue.js">
-											<span class="skill-name">Vue.js</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/bootstrap.png" alt="Bootstrap">
-											<span class="skill-name">Bootstrap</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/jquery.png" alt="jQuery">
-											<span class="skill-name">jQuery</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/babylon.png" alt="Babylon.js">
-											<span class="skill-name">Babylon.js</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill-category">
-									<h3>Backend</h3>
-									<div class="skills-container">
-										<div class="skill-item">
-											<img src="images/skills/node.png" alt="Node.js">
-											<span class="skill-name">Node.js</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/express.png" alt="Express.js">
-											<span class="skill-name">Express.js</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/net.png" alt="ASP.NET">
-											<span class="skill-name">ASP.NET</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/django.png" alt="Django">
-											<span class="skill-name">Django</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill-category">
-									<h3>Databases</h3>
-									<div class="skills-container">
-										<div class="skill-item">
-											<img src="images/skills/mssql.png" alt="MS SQL">
-											<span class="skill-name">MS SQL</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/mysql.png" alt="MySQL">
-											<span class="skill-name">MySQL</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/postgre.png" alt="PostgreSQL">
-											<span class="skill-name">PostgreSQL</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/mongo.png" alt="MongoDB">
-											<span class="skill-name">MongoDB</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill-category">
-									<h3>Cloud</h3>
-									<div class="skills-container">
-										<div class="skill-item">
-											<img src="images/skills/docker.png" alt="Docker">
-											<span class="skill-name">Docker</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/jenkins.png" alt="Jenkins">
-											<span class="skill-name">Jenkins</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/gcp.png" alt="GCP">
-											<span class="skill-name">GCP</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/terraform.png" alt="Terraform">
-											<span class="skill-name">Terraform</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 65%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/packer.png" alt="Packer">
-											<span class="skill-name">Packer</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 65%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/aws.webp" alt="AWS">
-											<span class="skill-name">AWS</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
-										</div>
-									</div>
-								</div>
-								<div class="skill-category">
-									<h3>Others</h3>
-									<div class="skills-container">
-										<div class="skill-item">
-											<img src="images/skills/git.png" alt="Git">
-											<span class="skill-name">Git</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 95%;"></div></div>
-										</div>
-										<div class="skill-item">
-											<img src="images/skills/jest.png" alt="Jest">
-											<span class="skill-name">Jest</span>
-											<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-						</article>
-						<!--Project-->
-						<article id="project" class="panel">
-							<header>
-								<h2>Projects</h2>
-							</header>
-							<style>
-								.project-container {
-									display: flex;
-									flex-wrap: wrap;
-									justify-content: space-between;
-									gap: 20px;
-								}
-								.project-card {
-									background-color: #f5f5f5;
-									border-radius: 10px;
-									padding: 20px;
-									width: calc(50% - 10px);
-									box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-									transition: transform 0.3s ease;
-									display: flex;
-									flex-direction: column;
-								}
-								.project-card:hover {
-									transform: translateY(-5px);
-								}
-								.project-thumbnail {
-									width: 100%;
-									height: 200px;
-									object-fit: cover;
-									border-radius: 5px;
-									margin-bottom: 15px;
-								}
-								.project-title {
-									font-size: 1.5em;
-									margin-bottom: 10px;
-									color: #e09a5d;
-								}
-								.project-tech {
-									font-size: 0.9em;
-									color: #666;
-									margin-bottom: 10px;
-								}
-								.project-description {
-									font-size: 1em;
-									margin-bottom: 15px;
-									flex-grow: 1;
-								}
-								.project-links {
-									display: flex;
-									justify-content: flex-start;
-									gap: 15px;
-								}
-								.project-links a {
-									text-decoration: none;
-									color: #e09a5d;
-									font-weight: bold;
-									transition: color 0.3s ease;
-								}
-								.project-links a:hover {
-									color: #c07a3d;
-								}
-							</style>
-							<div class="project-container">
-								<div class="project-card">
-									<img src="images/project/cloudnative.png" alt="Cloud native application" class="project-thumbnail">
-									<h3 class="project-title">Cloud Native Management Application</h3>
-									<p class="project-tech">Google Cloud Platform, Terraform, Packer, Node.js</p>
-									<p class="project-description">The Project demonstrates the deployment and management of a Health Check RESTful API integrated within a comprehensive cloud infrastructure. Utilizing GCP services, the project highlights automated CI/CD pipelines, infrastructure provisioning with Terraform, and robust health monitoring to maintain optimal application performance.</p>
-									<div class="project-links">
-										<a href="https://github.com/org-csye-6225" target="_blank">GitHub</a>
-									</div>
-								</div>
-								<div class="project-card">
-									<img src="images/project/covidDashboard.png" alt="Covid-19 Dashboard" class="project-thumbnail">
-									<h3 class="project-title">Covid-19 Dashboard</h3>
-									<p class="project-tech">React, HTML, CSS, JavaScript, leafletjs, RestAPI</p>
-									<p class="project-description">This project fetches the latest Covid-19 data from <a href="https://disease.sh/">disease.sh</a> APIs and visualizes it through an interactive map, tables, and graphs. It provides real-time statistics, geographic visualizations, detailed tabular data, and trend analysis, highlighting my skills in API integration and data visualization.</p>
-									<div class="project-links">
-										<a href="https://github.com/abhinavpklg/Covid-19-Dashboard" target="_blank">GitHub</a>
-										<a href=" https://covid19tracker-e36cc.web.app" target="_blank">Live Demo</a>
-									</div>
-								</div>
-								<div class="project-card">
-									<img src="images/project/voterguide.png" alt="VoterGuide" class="project-thumbnail">
-									<h3 class="project-title">Voter Guide</h3>
-									<p class="project-tech">React, JavaScript, Python, R</p>
-									<p class="project-description">
-										During the <a href="https://techfc.org/" target="_blank">2024 Tech for Change Hackathon</a>, co-hosted by Boston University and Howard University, we, as a team, developed an app that informs Boston voters about candidates running in their district's next election. This application was created within 24 hours, demonstrating our commitment to empowering voters and enhancing civic engagement.</p>
-									<div class="project-links">
-										<a href="https://github.com/CivicTechHackathon2024/voter-guide-fe" target="_blank">GitHub</a>
-										<a href="https://voter-guide-clone.vercel.app/" target="_blank">Live Demo</a>
-									</div>
-								</div>
-								<div class="project-card">
-									<img src="images/project/tickets.png" alt="Tickets and Billing Application" class="project-thumbnail">
-									<h3 class="project-title">Tickets and Billing Application</h3>
-									<p class="project-tech">Java, JavaFX, Python, MySql</p>
-									<p class="project-description">Developed and deployed a comprehensive Tickets and Billing Application for a museum, handling receipts for ticketing, salary management, sales reports, and souvenir stock management. Managed bug fixes, feature enhancements, and deployments single-handedly. This application, offered on an annual subscription basis, has been in use for the past 6 years.</p>
-								</div>
-							</div>
-						</article>
-
-						<!-- Contact -->
-							<article id="contact" class="panel">
+										<style>
+											.social-links {
+												display: flex;
+												justify-content: center;
+												gap: 10px;
+												margin-top: 10px;
+											}
+											.social-links a {
+												text-decoration: none;
+												color: inherit;
+											}
+										</style>
+									</header>
+									<a href="#journey" class="jumplink pic">
+										<span class="arrow icon solid fa-chevron-right"></span>
+										<img src="images/me.jpg" alt="" />
+									</a>
+								</article>
+							<!-- Journey -->
+							<article id="journey" class="panel">
 								<header>
-									<h2>Contact Me</h2>
+									<h2>My Journey</h2>
 								</header>
+								<div class="timeline">
+									<div class="timeline-item">
+										<div class="timeline-content">
+											<h3>Master of Science, Software Engineering Systems</h3>
+											<p><a href="https://graduate.northeastern.edu/program/master-of-science-in-software-engineering-systems-18774/" target="_blank"><img src="images/neu.jpg" alt="Northeastern University Logo" class="logo"></a></p>
+											<p>Northeastern University (Sept 2023 - May 2025)</p>
+											<p>• Software Engineering Fellow, <a href="https://headstarter.co/" target="_blank">Headstarter AI</a> (July-Sept 2024)</p>
+										</div>
+									</div>
+									<div class="timeline-item">
+										<div class="timeline-content">
+											<h3>Lead Software Engineer (Full Stack)</h3>
+											<p><a href="https://dekco.ai/" target="_blank"><img src="images/decko.png" alt="Dekco.ai Logo" class="logo"></a></p>
+											<p>Dekco.ai (Apr 2021 - Aug 2023)</p>
+										</div>
+									</div>
+									<div class="timeline-item">
+										<div class="timeline-content">
+											<h3>Software Engineer (Graphics, Full Stack)</h3>
+											<p><a href="https://www.snaptrude.com/" target="_blank"><img src="images/snaptrude.jpg" alt="Snaptrude Logo" class="logo"></a></p>
+											<p>Snaptrude (Dec 2018 - March 2021)</p>
+										</div>
+									</div>
+									<div class="timeline-item">
+										<div class="timeline-content">
+											<h3>Product Engineer (Full Stack)</h3>
+											<p><a href="https://mitratech.com/products/inszoom/" target="_blank"><img src="images/inszoom.png" alt="INSZoom" class="logo"></a></p>
+											<p>INSZoom (July 2018 - Nov 2018)</p>
+										</div>
+									</div>
+									<div class="timeline-item">
+										<div class="timeline-content">
+											<h3>Bachelor of Engineering, Computer Science</h3>
+											<p><a href="https://www.kletech.ac.in/" target="_blank"><img src="images/kle.png" alt="BVB College Logo" class="logo"></a></p>
+											<p>KLE Technological University (Sept 2014 - June 2018)</p>
+											<p>• Product Engineer Intern, <a href="https://mitratech.com/products/inszoom/" target="_blank">INSZoom</a> (Feb-May 2018)</p>
+											<p>• Publication: <a href="https://journaleet.in/articles/transition-from-conventional-to-agile-process-model-an-experience-report" target="_blank">"Transition from Conventional to Agile Process Model"</a> (Jan 2018)</p>
+											<p>• <a href="https://www.uml.edu/msb/global-entrepreneurship/" target="_blank">Global Entrepreneurship Exchange</a>, UMass Lowell (Dec 2017 - Jan 2018)</p>
+											<p>• Student Developer, <a href="https://www.gdv.com.au/" target="_blank">Global Digital Vision</a> (Jan-June 2017)</p>
+											<p>• Freelance Developer (June-Sept 2016)</p>
+										</div>
+									</div>
+								</div>
 								<style>
-									#contact form {
-										max-width: 600px;
+									.timeline {
+										position: relative;
+										max-width: 1200px;
 										margin: 0 auto;
 									}
-									#contact .row {
-										display: flex;
-										flex-wrap: wrap;
-										margin: -10px;
-									}
-									#contact .col-6,
-									#contact .col-12 {
-										padding: 10px;
-										box-sizing: border-box;
-									}
-									#contact input[type="text"],
-									#contact input[type="email"],
-									#contact textarea {
-										width: 100%;
-										padding: 10px;
-										margin-bottom: 10px;
-										border: 1px solid #ccc;
-										border-radius: 4px;
-									}
-									#contact input[type="submit"] {
+									.timeline::after {
+										content: '';
+										position: absolute;
+										width: 6px;
 										background-color: #e09a5d;
-										color: white;
-										border: none;
-										padding: 10px 20px;
-										border-radius: 4px;
-										cursor: pointer;
-										transition: background-color 0.3s ease;
+										top: 0;
+										bottom: 0;
+										left: 50%;
+										margin-left: -3px;
 									}
-									#contact input[type="submit"]:hover {
-										background-color: #c07a3d;
+									.timeline-item {
+										padding: 5px 5px;
+										position: relative;
+										background-color: inherit;
+										width: 50%;
+									}
+									
+									.timeline-item::after {
+										content: '';
+										position: absolute;
+										width: 25px;
+										height: 25px;
+										right: -13px;
+										background-color: white;
+										border: 4px solid #e09a5d;
+										top: 15px;
+										border-radius: 50%;
+										z-index: 1;
+									}
+									.timeline-item:nth-child(odd) {
+										left: 0;
+									}
+									.timeline-item:nth-child(even) {
+										left: 50%;
+									}
+									.timeline-item:nth-child(even)::after {
+										left: -13px;
+									}
+									.timeline-content {
+										padding: 20px 30px;
+										background-color: white;
+										position: relative;
+										border-radius: 6px;
+									}
+									.logo {
+										max-width: 150px;
+										max-height: 75px;
+										display: block;
+										margin: 20px auto 10px;
+										float: none;
 									}
 								</style>
-								<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-								<script>
-									document.addEventListener('DOMContentLoaded', function() {
-										const form = document.querySelector('form');
-										const submitButton = form.querySelector('input[type="submit"]');
-
-										form.addEventListener('submit', function(e) {
-											e.preventDefault();
-											
-											const formData = new FormData(form);
-											submitButton.value = 'Sending...';
-											submitButton.disabled = true;
-
-											axios.post('https://formspree.io/f/xrbzpgyr', formData)
-												.then(function(response) {
-													form.innerHTML = '<p>Thank you for your message. I\'ll get back to you soon!</p>';
-												})
-												.catch(function(error) {
-													alert('Oops! There was an error. Please try again later.');
-													submitButton.value = 'Send Message';
-													submitButton.disabled = false;
-												});
-										});
-									});
-								</script>
-								<form action="https://formspree.io/f/xrbzpgyr" method="POST">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<input type="text" name="name" placeholder="Name" required />
-										</div>
-										<div class="col-6 col-12-medium">
-											<input type="email" name="email" placeholder="Email" required />
-										</div>
-										<div class="col-12">
-											<input type="text" name="subject" placeholder="Subject" required />
-										</div>
-										<div class="col-12">
-											<textarea name="message" placeholder="Message" rows="6" required></textarea>
-										</div>
-										<div class="col-12">
-											<input type="submit" value="Send Message" />
+							</article>
+							<!--Technology-->
+							<article id="technology" class="panel">
+								
+								<style>
+									.skills-container {
+										display: flex;
+										flex-wrap: wrap;
+										justify-content: center;
+										gap: 20px;
+									}
+									.skill-category {
+										width: 100%;
+										margin-bottom: 30px;
+									}
+									.skill-category h3 {
+										text-align: center;
+										margin-bottom: 15px;
+									}
+									.skill-item {
+										display: flex;
+										flex-direction: column;
+										align-items: center;
+										width: 100px;
+									}
+									.skill-item img {
+										width: 50px;
+										height: 50px;
+										object-fit: contain;
+										margin-bottom: 10px;
+									}
+									.skill-item .skill-name {
+										text-align: center;
+										font-size: 0.8em;
+									}
+									.skill-item .proficiency {
+										width: 100%;
+										height: 5px;
+										background-color: #ddd;
+										border-radius: 5px;
+										overflow: hidden;
+									}
+									.skill-item .proficiency-level {
+										height: 100%;
+										background-color: #e09a5d;
+									}
+								</style>
+								<div class="skills-container">
+									<div class="skill-category">
+										<h3>Languages</h3>
+										<div class="skills-container">
+											<div class="skill-item">
+												<img src="images/skills/js.png" alt="JavaScript">
+												<span class="skill-name">JavaScript</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/python.png" alt="Python">
+												<span class="skill-name">Python</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/javaj.png" alt="Java">
+												<span class="skill-name">Java</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/C_sharp.png" alt="C#">
+												<span class="skill-name">C#</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/HTML.png" alt="HTML">
+												<span class="skill-name">HTML</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 95%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/css.png" alt="CSS">
+												<span class="skill-name">CSS</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/ts.png" alt="TypeScript">
+												<span class="skill-name">TypeScript</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/sql.png" alt="SQL">
+												<span class="skill-name">SQL</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+											</div>
 										</div>
 									</div>
-								</form>
+									<div class="skill-category">
+										<h3>Frontend</h3>
+										<div class="skills-container">
+											<div class="skill-item">
+												<img src="images/skills/react.png" alt="ReactJS">
+												<span class="skill-name">ReactJS</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/angular.png" alt="Angular">
+												<span class="skill-name">Angular</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/vue.png" alt="Vue.js">
+												<span class="skill-name">Vue.js</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/bootstrap.png" alt="Bootstrap">
+												<span class="skill-name">Bootstrap</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/jquery.png" alt="jQuery">
+												<span class="skill-name">jQuery</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/babylon.png" alt="Babylon.js">
+												<span class="skill-name">Babylon.js</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill-category">
+										<h3>Backend</h3>
+										<div class="skills-container">
+											<div class="skill-item">
+												<img src="images/skills/node.png" alt="Node.js">
+												<span class="skill-name">Node.js</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/express.png" alt="Express.js">
+												<span class="skill-name">Express.js</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/net.png" alt="ASP.NET">
+												<span class="skill-name">ASP.NET</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/django.png" alt="Django">
+												<span class="skill-name">Django</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill-category">
+										<h3>Databases</h3>
+										<div class="skills-container">
+											<div class="skill-item">
+												<img src="images/skills/mssql.png" alt="MS SQL">
+												<span class="skill-name">MS SQL</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/mysql.png" alt="MySQL">
+												<span class="skill-name">MySQL</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 80%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/postgre.png" alt="PostgreSQL">
+												<span class="skill-name">PostgreSQL</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/mongo.png" alt="MongoDB">
+												<span class="skill-name">MongoDB</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 85%;"></div></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill-category">
+										<h3>Cloud</h3>
+										<div class="skills-container">
+											<div class="skill-item">
+												<img src="images/skills/docker.png" alt="Docker">
+												<span class="skill-name">Docker</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/jenkins.png" alt="Jenkins">
+												<span class="skill-name">Jenkins</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/gcp.png" alt="GCP">
+												<span class="skill-name">GCP</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 70%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/terraform.png" alt="Terraform">
+												<span class="skill-name">Terraform</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 65%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/packer.png" alt="Packer">
+												<span class="skill-name">Packer</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 65%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/aws.webp" alt="AWS">
+												<span class="skill-name">AWS</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 60%;"></div></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill-category">
+										<h3>Others</h3>
+										<div class="skills-container">
+											<div class="skill-item">
+												<img src="images/skills/git.png" alt="Git">
+												<span class="skill-name">Git</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 95%;"></div></div>
+											</div>
+											<div class="skill-item">
+												<img src="images/skills/jest.png" alt="Jest">
+												<span class="skill-name">Jest</span>
+												<div class="proficiency"><div class="proficiency-level" style="width: 90%;"></div></div>
+											</div>
+										</div>
+									</div>
+								</div>
+	
 							</article>
-
-					</div>
-
+							<!--Project-->
+							<article id="project" class="panel">
+								<header>
+									<h2>Projects</h2>
+								</header>
+								<style>
+									.project-container {
+										display: flex;
+										flex-wrap: wrap;
+										justify-content: space-between;
+										gap: 20px;
+									}
+									.project-card {
+										background-color: #f5f5f5;
+										border-radius: 10px;
+										padding: 20px;
+										width: calc(50% - 10px);
+										box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+										transition: transform 0.3s ease;
+										display: flex;
+										flex-direction: column;
+									}
+									.project-card:hover {
+										transform: translateY(-5px);
+									}
+									.project-thumbnail {
+										width: 100%;
+										height: 200px;
+										object-fit: cover;
+										border-radius: 5px;
+										margin-bottom: 15px;
+									}
+									.project-title {
+										font-size: 1.5em;
+										margin-bottom: 10px;
+										color: #e09a5d;
+									}
+									.project-tech {
+										font-size: 0.9em;
+										color: #666;
+										margin-bottom: 10px;
+									}
+									.project-description {
+										font-size: 1em;
+										margin-bottom: 15px;
+										flex-grow: 1;
+									}
+									.project-links {
+										display: flex;
+										justify-content: flex-start;
+										gap: 15px;
+									}
+									.project-links a {
+										text-decoration: none;
+										color: #e09a5d;
+										font-weight: bold;
+										transition: color 0.3s ease;
+									}
+									.project-links a:hover {
+										color: #c07a3d;
+									}
+								</style>
+								<div class="project-container">
+									<div class="project-card">
+										<img src="images/project/cloudnative.png" alt="Cloud native application" class="project-thumbnail">
+										<h3 class="project-title">Cloud Native Management Application</h3>
+										<p class="project-tech">Google Cloud Platform, Terraform, Packer, Node.js</p>
+										<p class="project-description">The Project demonstrates the deployment and management of a Health Check RESTful API integrated within a comprehensive cloud infrastructure. Utilizing GCP services, the project highlights automated CI/CD pipelines, infrastructure provisioning with Terraform, and robust health monitoring to maintain optimal application performance.</p>
+										<div class="project-links">
+											<a href="https://github.com/org-csye-6225" target="_blank">GitHub</a>
+										</div>
+									</div>
+									<div class="project-card">
+										<img src="images/project/covidDashboard.png" alt="Covid-19 Dashboard" class="project-thumbnail">
+										<h3 class="project-title">Covid-19 Dashboard</h3>
+										<p class="project-tech">React, HTML, CSS, JavaScript, leafletjs, RestAPI</p>
+										<p class="project-description">This project fetches the latest Covid-19 data from <a href="https://disease.sh/">disease.sh</a> APIs and visualizes it through an interactive map, tables, and graphs. It provides real-time statistics, geographic visualizations, detailed tabular data, and trend analysis, highlighting my skills in API integration and data visualization.</p>
+										<div class="project-links">
+											<a href="https://github.com/abhinavpklg/Covid-19-Dashboard" target="_blank">GitHub</a>
+											<a href=" https://covid19tracker-e36cc.web.app" target="_blank">Live Demo</a>
+										</div>
+									</div>
+									<div class="project-card">
+										<img src="images/project/voterguide.png" alt="VoterGuide" class="project-thumbnail">
+										<h3 class="project-title">Voter Guide</h3>
+										<p class="project-tech">React, JavaScript, Python, R</p>
+										<p class="project-description">
+											During the <a href="https://techfc.org/" target="_blank">2024 Tech for Change Hackathon</a>, co-hosted by Boston University and Howard University, we, as a team, developed an app that informs Boston voters about candidates running in their district's next election. This application was created within 24 hours, demonstrating our commitment to empowering voters and enhancing civic engagement.</p>
+										<div class="project-links">
+											<a href="https://github.com/CivicTechHackathon2024/voter-guide-fe" target="_blank">GitHub</a>
+											<a href="https://voter-guide-clone.vercel.app/" target="_blank">Live Demo</a>
+										</div>
+									</div>
+									<div class="project-card">
+										<img src="images/project/tickets.png" alt="Tickets and Billing Application" class="project-thumbnail">
+										<h3 class="project-title">Tickets and Billing Application</h3>
+										<p class="project-tech">Java, JavaFX, Python, MySql</p>
+										<p class="project-description">Developed and deployed a comprehensive Tickets and Billing Application for a museum, handling receipts for ticketing, salary management, sales reports, and souvenir stock management. Managed bug fixes, feature enhancements, and deployments single-handedly. This application, offered on an annual subscription basis, has been in use for the past 6 years.</p>
+									</div>
+								</div>
+							</article>
+	
+							<!-- Contact -->
+								<article id="contact" class="panel">
+									<header>
+										<h2>Contact Me</h2>
+									</header>
+									<style>
+										#contact form {
+											max-width: 600px;
+											margin: 0 auto;
+										}
+										#contact .row {
+											display: flex;
+											flex-wrap: wrap;
+											margin: -10px;
+										}
+										#contact .col-6,
+										#contact .col-12 {
+											padding: 10px;
+											box-sizing: border-box;
+										}
+										#contact input[type="text"],
+										#contact input[type="email"],
+										#contact textarea {
+											width: 100%;
+											padding: 10px;
+											margin-bottom: 10px;
+											border: 1px solid #ccc;
+											border-radius: 4px;
+										}
+										#contact input[type="submit"] {
+											background-color: #e09a5d;
+											color: white;
+											border: none;
+											padding: 10px 20px;
+											border-radius: 4px;
+											cursor: pointer;
+											transition: background-color 0.3s ease;
+										}
+										#contact input[type="submit"]:hover {
+											background-color: #c07a3d;
+										}
+									</style>
+									<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+									<script>
+										document.addEventListener('DOMContentLoaded', function() {
+											const form = document.querySelector('form');
+											const submitButton = form.querySelector('input[type="submit"]');
+	
+											form.addEventListener('submit', function(e) {
+												e.preventDefault();
+												
+												const formData = new FormData(form);
+												submitButton.value = 'Sending...';
+												submitButton.disabled = true;
+	
+												axios.post('https://formspree.io/f/xrbzpgyr', formData)
+													.then(function(response) {
+														form.innerHTML = '<p>Thank you for your message. I\'ll get back to you soon!</p>';
+													})
+													.catch(function(error) {
+														alert('Oops! There was an error. Please try again later.');
+														submitButton.value = 'Send Message';
+														submitButton.disabled = false;
+													});
+											});
+										});
+									</script>
+									<form action="https://formspree.io/f/xrbzpgyr" method="POST">
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="Name" required />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="email" name="email" placeholder="Email" required />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" placeholder="Subject" required />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message" rows="6" required></textarea>
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</form>
+								</article>
+	
+						</div>
+	
+				</div>
 			</div>
+		</main>
+
+		<!-- Wrapper-->
+			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -658,6 +685,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="js/noise.min.js"></script>
+			<script src="js/coalesce.js"></script>
+			<script src="js/util.js"></script>
 
 	</body>
 </html>
